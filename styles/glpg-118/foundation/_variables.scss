@@ -1,0 +1,30 @@
+//Global
+$cmp-bottom-gap: 20px;
+
+// AEM config 
+$root-path : '/etc.clientlibs/glpg-werapriority/clientlibs/assets/resources/';
+
+//Storybook config
+$root-path : './';
+
+// Font family
+$URW-DIN : 'URW-din';
+
+
+// Colors variables and name specifications
+// @see http://chir.ag/projects/name-that-color/
+
+// ----------------- werapriority color pleate ------------
+// Primary Colors
+$primary: #D21147;
+
+// Secondary Colors
+$secondary: #e5e5e5; 
+
+// Tertiary Colors
+$grey: #6e715f;
+$color-error: #d0021b;
+$color-dropdown-angle: #e7e3e2; //for select
+
+//---------- other color -------
+$color-swiss-coffee: #ded7d3;

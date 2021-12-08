@@ -1,0 +1,12 @@
+
+.h3, h3 {
+    font-size: rem(36px);
+}
+
+@include media-breakpoint-down(sm){
+    .h3, h3 {
+        font-size: rem(24px);
+        line-height: rem(26px);
+    }
+}
+

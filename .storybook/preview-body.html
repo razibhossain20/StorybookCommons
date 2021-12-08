@@ -1,0 +1,33 @@
+<!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet"> -->
+
+<style>
+    #root > div {
+        z-index: 1051 !important;
+    }
+    #root .info__show-button {
+        position: relative;
+        z-index: 1052;
+    }
+
+    #root .info__overlay {
+        z-index: 1053 !important;
+    }
+
+    #root .info__close-button {
+        position: relative;
+        z-index: 1054;
+    }
+
+    [data-site-id="glpg-118"], .sb-show-main.sb-main-padded{
+        padding: 0 !important;
+    }
+    
+
+</style>
+
+<script>
+    setTimeout(function(){
+        document.body.setAttribute('data-site-id', 'glpg-118');
+    },500)
+</script>
+

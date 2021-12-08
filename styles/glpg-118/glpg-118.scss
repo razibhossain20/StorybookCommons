@@ -1,0 +1,19 @@
+// =glpg-118 
+@media screen {
+    [data-site-id="#{$site-id}"] {
+        // Foundation
+        @import "foundation/__foundation-loader";
+
+        // Third party
+        @import "thirdparty/__thirdparty-loader";
+
+        // Bootstrap 5
+        @import "bootstrap/__bootstrap-loader";
+
+        // Pages
+        @import "pages/__pages-loader";
+
+        // Components/Modules
+        @import "components/__components-loader";
+    }
+}

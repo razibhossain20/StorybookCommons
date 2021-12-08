@@ -1,0 +1,10 @@
+// Webfont: URW-dins
+// ('#{$root-path}/fonts/URW_Din/URWDIN-Regular.ttf')
+
+@font-face {
+    font-family: 'URW-din';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('URW din'), local('URW-din'), url(#{$root-path}fonts/URW_Din/URWDIN-Regular.ttf) format('truetype');
+}

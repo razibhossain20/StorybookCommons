@@ -1,0 +1,108 @@
+
+.headline-text {
+    & > div:not(.mb-0):not(.m-0) {
+        margin-bottom: $cmp-bottom-gap;
+    }
+
+    .cmp-text {
+        // Override AEM specific RTE classes ...
+        // @note Keep in mind: the text from bootstarp
+        // @see `ui.apps/resources/frontend/src/app/styles/bootstrap/_variables-bootstrap-override-glpg-117.scss`
+        p {
+            font-size: rem(16px);
+            line-height: rem(32px);
+        }
+        p.small {
+            font-size: rem(14px);
+            line-height: rem(24px);
+        }
+
+        p.xsmall {
+            font-size: rem(13px);
+            line-height: rem(24px);
+        }
+        p {
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        sub,
+        sup {
+            font-size: 75%;
+        }
+
+        sup {
+            top: -0.5em;
+        }
+
+        sub {
+            top: 0.5em;
+        }
+
+        // Lists
+        ul {
+            list-style-type: none;
+            padding-left: 0px;
+
+            li {
+                position: relative;
+                padding-left: rem(15px);
+
+                & + li {
+                    margin-top: rem(10px);
+                }
+
+                &::before {
+                    top: 0;
+                    left: 0;
+                    content: "";
+                    width: rem(6px);
+                    height: rem(6px);
+                    margin: auto;
+                    display: block;
+                    border-radius: rem(6px);
+                    position: absolute;
+                    bottom: calc(100% - 1.5em);
+                    background-color: $primary;
+                }
+
+                &.no-before {
+                    &:before {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        blockquote,
+        q {
+            font-size: rem(24px);
+            font-weight: 700;
+            line-height: rem(36px);
+        }
+
+        // AEM BUTTON-LINK
+        & + .button-link {
+            margin-top: rem(20);
+        }
+    }
+}
+
+
+// RTL list bulet update
+.orientation-right {
+    .headline-text .cmp-text ul {
+        padding-right: 0;
+
+        li {
+            padding-left: 0;
+            padding-right: rem(20px);
+
+            &::before {
+                left: initial;
+                right: 0;
+            }
+        }
+    }
+}

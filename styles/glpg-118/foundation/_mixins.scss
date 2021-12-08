@@ -1,0 +1,95 @@
+// @usage `@include font-face-mixin(TEXT, 'path/to/font/file', normal, normal);`
+
+// @note Older syntax for: TTF/WOFF/SVG
+// @mixin font-face-mixin($font-family, $file-path, $font-weight, $font-style) {
+//   @font-face {
+//     font-family: $font-family;
+//     src:
+//       url('#{$file-path}' + '.ttf') format('truetype'),
+//       url('#{$file-path}' + '.woff') format('woff'),
+//       url('#{$file-path}' + '.svg##{random(987654321)}-#{random(123456789)}') format('svg');
+//     font-weight: $font-weight;
+//     font-style: $font-style;
+//   }
+// }
+
+// @note WOFF/WOFF2 syntax only. Welcome to 2017!
+// @usage `@include font-face-mixin(TEXT, 'path/to/font/file', normal, normal);`
+@mixin font-face-mixin($font-family, $file-path, $font-weight, $font-style) {
+    @font-face {
+      font-family: $font-family;
+      src:
+        url('#{$file-path}' + '.woff2') format('woff2'),
+        url('#{$file-path}' + '.woff') format('woff');
+      font-weight: $font-weight;
+      font-style: $font-style;
+    }
+  }
+
+  
+
+
+  // Convert font-size from px to rem with px fallback
+// @param $size - the value in pixel you want to convert
+// @usage e.g. `p { @include font-size-rem-mixin(12); }`
+// @see https://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/
+// @see https://github.com/stubbornella/oocss/blob/master/oocss/src/components/utils/_fontSize.scss
+// Mixin that will include the fall back px declaration as well as the calculated rem value.
+@mixin font-size-rem-mixin($size) {
+    // font-size: $size;
+    font-size: rem($size);
+  }
+
+  
+
+
+  // @usage `@include margin-rem-mixin(1, 2, 3, 4);`
+@mixin margin-rem-mixin(
+    $margin-top: null,
+    $margin-right: null,
+    $margin-bottom: null,
+    $margin-left: null) {
+    @if($margin-top) {
+      margin-top: rem($margin-top);
+    }
+    @if($margin-right) {
+      margin-right: rem($margin-right);
+    }
+    @if($margin-bottom) {
+      margin-bottom: rem($margin-bottom);
+    }
+    @if($margin-left) {
+      margin-left: rem($margin-left);
+    }
+  }
+
+  
+
+  // Custom Scrollbar Design
+// @usage `@include scrollbars(.5em, slategray);`
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white, 50%)) {
+    & {
+      overflow: auto;
+    }
+    &::-webkit-scrollbar {
+      width: $size;
+      height: $size;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 100px;
+      background: $foreground-color;
+    }
+    &::-webkit-scrollbar-track {
+      border-radius: 100px;
+      background: $background-color;
+    }
+  }
+  
+// Target IE-11
+// @usage `@include target-metro { color: cyan; }`
+@mixin target-metro {
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      @content;
+    }
+  }
+    
