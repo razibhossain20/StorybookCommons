@@ -3,7 +3,6 @@
     position: relative;
     margin-bottom: $cmp-bottom-gap;
 
-    // button style override
     .btn-link {
         font-weight: 400;
         font-size: rem(16px);
@@ -16,8 +15,6 @@
             box-shadow: none;
         }
     }
-
-    // new button type
     .btn {
         border-width: rem(2px);
 
@@ -50,7 +47,7 @@
                 height: 1px;
                 z-index: 0;
                 pointer-events: none;
-                background-color: $grey;
+                background-color: $bg-secondary;
             }
 
             &:before {
@@ -65,7 +62,7 @@
         &[data-type="round"] {
             font-size: rem(13px);
             line-height: rem(24px);
-            border: 1px solid $color-swiss-coffee;
+            border: 1px solid $color-secondary;
             background-color: $white;
             color: $black;
             font-weight: 700;
@@ -76,25 +73,11 @@
             margin-right: 10px;
             white-space: nowrap;
             transition: all 0.3s ease;
-
-            // &:active,
-            // &:focus {
-            //     background-color: $color-valencia;
-            //     border: 1px solid $color-valencia;
-            //     -webkit-box-shadow: inset 0 4px 4px 0
-            //         rgba(5, 13, 31, 0.18);
-            //     box-shadow: inset 0 4px 4px 0 rgba(5, 13, 31, 0.18);
-            // }
-
-            // &:hover {
-            //     border: 1px solid $color-swiss-coffee !important;
-            //     color: inherit !important;
-            // }
         }
 
         &.btn-link {
             &[data-type="line"] {
-                color: $grey;
+                color: $bg-secondary;
                 background-color: $white;
                 min-width: rem(166px);
                 padding: 0;

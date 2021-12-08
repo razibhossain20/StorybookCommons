@@ -1,6 +1,5 @@
-// =glpg-118 
-@media screen {
-    [data-site-id="#{$site-id}"] {
+$site-id: "glpg-118";
+
         // Foundation
         @import "foundation/__foundation-loader";
 
@@ -12,8 +11,9 @@
 
         // Pages
         @import "pages/__pages-loader";
-
-        // Components/Modules
-        @import "components/__components-loader";
-    }
-}
+        @media screen {
+            [data-site-id="#{$site-id}"] {
+                    // Components/Modules
+                    @import "components/__components-loader";
+                }
+            }

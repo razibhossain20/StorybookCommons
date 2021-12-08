@@ -1,7 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 
-storiesOf("Welcome", module).add("index", () => (
+storiesOf("Others/Welcome", module).add("index", () => (
     <div className="px-4 py-5 my-5 text-center">
         <div>
             <img

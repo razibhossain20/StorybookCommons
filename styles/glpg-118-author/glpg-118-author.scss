@@ -3,5 +3,10 @@
 // Variables
 @import "variables/_variables-loader-author";
 
-// Components/Modules
-@import "components/_components-loader-author";
+
+@media screen {
+    [data-site-id="#{$site-id}"] {
+        // Components/Modules
+        @import "components/_components-loader-author";
+    }
+}

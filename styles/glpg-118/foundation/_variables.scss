@@ -1,4 +1,5 @@
 //Global
+$site-id: "glpg-118";
 $cmp-bottom-gap: 20px;
 
 // AEM config 
@@ -8,23 +9,26 @@ $root-path : '/etc.clientlibs/glpg-werapriority/clientlibs/assets/resources/';
 $root-path : './';
 
 // Font family
-$URW-DIN : 'URW-din';
+$body-font: 'Roboto', sans-serif; 
+$header-font: 'Dosis', sans-serif;
 
+//color
+$color-white:#ffffff;
+$color-black:#000000;
+$color-primary:#D21147;
+$color-secondary:#e5e5e5;
+$color-success:#28a745;
+$color-danger:#d0021b;
+$color-warning:#ffc107;
+$color-info:#17a2b8;
 
-// Colors variables and name specifications
-// @see http://chir.ag/projects/name-that-color/
+//background
+$bg-white:#ffffff;
+$bg-black:#000000;
+$bg-primary:#D21147;
+$bg-secondary:#e5e5e5;
+$bg-success:#28a745;
+$bg-danger:#dc3545;
+$bg-warning:#ffc107;
+$bg-info:#17a2b8;
 
-// ----------------- werapriority color pleate ------------
-// Primary Colors
-$primary: #D21147;
-
-// Secondary Colors
-$secondary: #e5e5e5; 
-
-// Tertiary Colors
-$grey: #6e715f;
-$color-error: #d0021b;
-$color-dropdown-angle: #e7e3e2; //for select
-
-//---------- other color -------
-$color-swiss-coffee: #ded7d3;

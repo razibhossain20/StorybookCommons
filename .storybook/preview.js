@@ -18,6 +18,16 @@ addParameters({
     },
 });
 
+export const parameters = {
+    options: {
+      storySort: {
+        method: 'alphabetical',
+        order: [],
+        locales: 'en-US',
+      }
+    },
+  };
+
 // automatically import all files ending in *.stories.js
 const req = require.context("../stories", true, /\.stories\.js$/);
 function loadStories() {
