@@ -1,11 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import HtmlComment from '../../particles/html-comment/HtmlComment';
 
 
 const ImageExtension = (props) => (
   <div className="image-extension section">
-    <HtmlComment text="Start image-extension component markup, Copy from here" />
 
     <div className={`${props.image_position || ''} image-container`}>
 
@@ -30,8 +28,6 @@ const ImageExtension = (props) => (
 
       </a>
     </div>
-
-    <HtmlComment text="End image-extension component markup" />
   </div>
 );
 
