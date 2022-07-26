@@ -14,7 +14,8 @@ module.exports = {
     // "@storybook/preset-create-react-app",
     '@whitespace/storybook-addon-html',
     'storybook-dark-mode',
-    '@storybook/addon-storysource'
+    '@storybook/addon-storysource',
+    'storybook-addon-code-preview'
   ],
 
   webpackFinal: async (config, { configType }) => {

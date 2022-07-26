@@ -1,11 +1,10 @@
+$site-id: "glpg-111";
 
-// =glpg-118 
 // Foundation
 @import "foundation/__foundation-loader";
 
 // Third party
 @import "thirdparty/__thirdparty-loader";
-
 
 // Bootstrap 5
 @import "bootstrap/__bootstrap-loader";
@@ -14,10 +13,8 @@
 @import "pages/__pages-loader";
 
 
-@media screen {
-    [data-site-id="#{$site-id}"] {
-        // Components/Modules
-        @import "components/__components-loader";
-
-    }
+[data-site-id="#{$site-id}"] {
+    // Components/Modules
+    @import "components/__components-loader";
 }
+

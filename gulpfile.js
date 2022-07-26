@@ -53,7 +53,7 @@ const paths = {
     dest: {
       aem: {
         designs: {
-          glpg_118: {
+          glpg_111: {
             scripts: aem_dest+"scripts",
             scripts_thirdparty: aem_dest+"scripts/thirdparty"
           }
@@ -69,18 +69,18 @@ const paths = {
     dest: {
       aem: {
         designs: {
-          glpg_118: aem_dest+"styles",
-          glpg_118_author:aem_dest+"styles"
+          glpg_111: aem_dest+"styles",
+          glpg_111_author:aem_dest+"styles"
         }
       },
     },
-    glpg_118: {
-      src: "./styles/glpg-118",
-      entry: "./styles/glpg-118/glpg-118.scss"
+    glpg_111: {
+      src: "./styles/glpg-111",
+      entry: "./styles/glpg-111/glpg-111.scss"
     },
-    glpg_118_author: {
-      src: "./styles/glpg-118-author",
-      entry: "./styles/glpg-118-author/glpg-118-author.scss"
+    glpg_111_author: {
+      src: "./styles/glpg-111-author",
+      entry: "./styles/glpg-111-author/glpg-111-author.scss"
     }
   },
   fonts: {
@@ -89,7 +89,7 @@ const paths = {
     dest: {
       aem: {
         designs: {
-          glpg_118:aem_dest+"fonts"
+          glpg_111:aem_dest+"fonts"
         }
       }
     }
@@ -102,7 +102,7 @@ const paths = {
       aem: {
         dam: "./public/images",
         designs: {
-          glpg_118: "./public/images/"
+          glpg_111: "./public/images/"
         }
       },
       app: "./public/images"
@@ -111,7 +111,7 @@ const paths = {
       aem: {
         //dam: dam_dest+"images",
         designs: {
-          glpg_118:aem_dest+"images"
+          glpg_111:aem_dest+"images"
         }
       },
       app: "./public/dist/images"
@@ -173,13 +173,13 @@ const imageminOptions = {
 
 // =IMAGES:DESIGNS (ETC/DESIGNS)
 gulp.task('images:designs', function (done) {
-  // glpg-118
+  // glpg-111
   gulp
-    .src(paths.images.src.aem.designs.glpg_118 + "/**/*.+(png|jpg|gif|svg|ico)")
+    .src(paths.images.src.aem.designs.glpg_111 + "/**/*.+(png|jpg|gif|svg|ico)")
     .pipe(newer(paths.images.dest.app))
     .pipe(imagemin(imageminOptions))
     .pipe(gulp.dest(paths.images.dest.app))
-    .pipe(gulp.dest(paths.images.dest.aem.designs.glpg_118));
+    .pipe(gulp.dest(paths.images.dest.aem.designs.glpg_111));
 
   done();
 });
@@ -201,7 +201,7 @@ gulp.task('images', gulp.series(
 gulp.task('fonts', function (done) {
   gulp
     .src(paths.fonts.glob)
-    .pipe(gulp.dest(paths.fonts.dest.aem.designs.glpg_118));
+    .pipe(gulp.dest(paths.fonts.dest.aem.designs.glpg_111));
   done();
 });
 
@@ -241,8 +241,8 @@ const postcssPluginsOptions = [
   // mqpacker, // Make sure mqpacker is last!
 ];
 
-// =STYLES:glpg_118
-gulp.task("styles:glpg_118", function(done) {
+// =STYLES:glpg_111
+gulp.task("styles:glpg_111", function(done) {
   gutil.log(
     gutil.colors.blue("[INFO] ") +
       "Generating CSS files: Sass, PostCSS (Autoprefixer) + Nano"
@@ -254,7 +254,7 @@ gulp.task("styles:glpg_118", function(done) {
   }
 
   gulp
-    .src(paths.styles.glpg_118.entry)
+    .src(paths.styles.glpg_111.entry)
     // .pipe(sourcemaps.init())
     .pipe(plumber({ errorHandler: onError }))
     .pipe(sass(sassOptions))
@@ -265,16 +265,16 @@ gulp.task("styles:glpg_118", function(done) {
     .pipe(cssnano({zindex: false})) // @TODO ESE Add this later!
     .pipe(rename({ suffix: ".min" }))
     // .pipe(sourcemaps.write(paths.sourcemaps.dest))
-    .pipe(gulp.dest(paths.styles.glpg_118.src))
-    //.pipe(gulp.dest(paths.styles.glpg_118.dest))
-    .pipe(gulp.dest(paths.styles.dest.aem.designs.glpg_118))
+    .pipe(gulp.dest(paths.styles.glpg_111.src))
+    //.pipe(gulp.dest(paths.styles.glpg_111.dest))
+    .pipe(gulp.dest(paths.styles.dest.aem.designs.glpg_111))
   done();
 });
 
-// =STYLES:glpg_118_AUTHOR
-gulp.task("styles:glpg_118_author", function(done) {
+// =STYLES:glpg_111_AUTHOR
+gulp.task("styles:glpg_111_author", function(done) {
   gulp
-    .src(paths.styles.glpg_118_author.entry)
+    .src(paths.styles.glpg_111_author.entry)
     .pipe(plumber({ errorHandler: onError }))
     .pipe(sass(sassOptions))
     .on("error", notify.onError(function(error) {
@@ -282,16 +282,16 @@ gulp.task("styles:glpg_118_author", function(done) {
       }))
     .pipe(postcss(postcssPluginsOptions))
     .pipe(rename({ suffix: ".min" }))
-    .pipe(gulp.dest(paths.styles.glpg_118_author.src))
-    //.pipe(gulp.dest(paths.styles.glpg_118_author.dest))
-    .pipe(gulp.dest(paths.styles.dest.aem.designs.glpg_118_author))
+    .pipe(gulp.dest(paths.styles.glpg_111_author.src))
+    //.pipe(gulp.dest(paths.styles.glpg_111_author.dest))
+    .pipe(gulp.dest(paths.styles.dest.aem.designs.glpg_111_author))
   done();
 });
 
 gulp.task('styles', gulp.series(
   [
-    'styles:glpg_118',
-    'styles:glpg_118_author',
+    'styles:glpg_111',
+    'styles:glpg_111_author',
   ], function (done) {
     done();
   }
@@ -304,7 +304,7 @@ gulp.task('styles', gulp.series(
 gulp.task('scripts:thirdparty', function(done) {
   gulp
     .src(paths.scripts.scripts_thirdparty)
-    .pipe(gulp.dest(paths.scripts.dest.aem.designs.glpg_118.scripts_thirdparty));
+    .pipe(gulp.dest(paths.scripts.dest.aem.designs.glpg_111.scripts_thirdparty));
   done();
 });
 
@@ -325,7 +325,7 @@ gulp.task('scripts:components', function(done) {
   gulp
     .src(paths.scripts.components)
     .pipe(concat("main.js"))
-    .pipe(gulp.dest(paths.scripts.dest.aem.designs.glpg_118.scripts))
+    .pipe(gulp.dest(paths.scripts.dest.aem.designs.glpg_111.scripts))
   done();
 });
 

@@ -1,0 +1,12 @@
+//Glpg-111-AUTHOR styles 
+$site-id: "glpg-111";
+
+// Variables
+@import "variables/_variables-loader-author";
+
+
+
+[data-site-id="#{$site-id}"] {
+    // Components/Modules
+    @import "components/_components-loader-author";
+}

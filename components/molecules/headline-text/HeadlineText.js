@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 
 const HeadlineText = (props) => (
@@ -11,15 +10,5 @@ const HeadlineText = (props) => (
     </div>
   </div>
 );
-
-HeadlineText.propTypes = {
-  children: PropTypes.node.isRequired,
-  /** The custom class for text */
-  customClass: PropTypes.string
-};
-
-HeadlineText.defaultProps = {
-  customClass: ''
-};
 
 export default HeadlineText;
