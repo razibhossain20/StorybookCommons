@@ -8,7 +8,7 @@ export default {
     content: {
         control: {type: 'text'},
         name: 'Heading1',
-        defaultValue: 'Lorem Ipsum is simply dummy text of the printing and typesetting',
+        defaultValue: 'Lorem Ipsum is dummy text of the printing and typesetting',
     },
    }
 };
