@@ -37,7 +37,7 @@ gulp.task('set-env-node-prod', function () {
 });
 
 //---- const dest paths for aem site -----
-var aem_dest = "../../../src/main/content/jcr_root/apps/glpg-werapriority/clientlibs/assets/resources/";
+var aem_dest = "../../../src/main/content/jcr_root/apps/glpg-mymentum/clientlibs/assets/resources/";
 //var dam_dest = "../../../../ui.content/src/main/content/jcr_root/content/dam/glpg-ibd/";
 
 // =PATHS
@@ -179,7 +179,7 @@ gulp.task('images:designs', function (done) {
     .pipe(newer(paths.images.dest.app))
     .pipe(imagemin(imageminOptions))
     .pipe(gulp.dest(paths.images.dest.app))
-    .pipe(gulp.dest(paths.images.dest.aem.designs.glpg_111));
+    // .pipe(gulp.dest(paths.images.dest.aem.designs.glpg_111));
 
   done();
 });
@@ -201,7 +201,7 @@ gulp.task('images', gulp.series(
 gulp.task('fonts', function (done) {
   gulp
     .src(paths.fonts.glob)
-    .pipe(gulp.dest(paths.fonts.dest.aem.designs.glpg_111));
+    // .pipe(gulp.dest(paths.fonts.dest.aem.designs.glpg_111));
   done();
 });
 
@@ -267,7 +267,7 @@ gulp.task("styles:glpg_111", function(done) {
     // .pipe(sourcemaps.write(paths.sourcemaps.dest))
     .pipe(gulp.dest(paths.styles.glpg_111.src))
     //.pipe(gulp.dest(paths.styles.glpg_111.dest))
-    .pipe(gulp.dest(paths.styles.dest.aem.designs.glpg_111))
+    // .pipe(gulp.dest(paths.styles.dest.aem.designs.glpg_111))
   done();
 });
 
@@ -284,7 +284,7 @@ gulp.task("styles:glpg_111_author", function(done) {
     .pipe(rename({ suffix: ".min" }))
     .pipe(gulp.dest(paths.styles.glpg_111_author.src))
     //.pipe(gulp.dest(paths.styles.glpg_111_author.dest))
-    .pipe(gulp.dest(paths.styles.dest.aem.designs.glpg_111_author))
+    // .pipe(gulp.dest(paths.styles.dest.aem.designs.glpg_111_author))
   done();
 });
 
@@ -304,7 +304,7 @@ gulp.task('styles', gulp.series(
 gulp.task('scripts:thirdparty', function(done) {
   gulp
     .src(paths.scripts.scripts_thirdparty)
-    .pipe(gulp.dest(paths.scripts.dest.aem.designs.glpg_111.scripts_thirdparty));
+    // .pipe(gulp.dest(paths.scripts.dest.aem.designs.glpg_111.scripts_thirdparty));
   done();
 });
 
@@ -325,7 +325,7 @@ gulp.task('scripts:components', function(done) {
   gulp
     .src(paths.scripts.components)
     .pipe(concat("main.js"))
-    .pipe(gulp.dest(paths.scripts.dest.aem.designs.glpg_111.scripts))
+    // .pipe(gulp.dest(paths.scripts.dest.aem.designs.glpg_111.scripts))
   done();
 });
 
@@ -352,14 +352,14 @@ gulp.task('serve', gulp.series(
   ], function (done) {
 
     // Watch styles
-    gulp.watch(paths.styles.glob, gulp.series(['styles'], function (done) {
-      done();
-    }));
+    // gulp.watch(paths.styles.glob, gulp.series(['styles'], function (done) {
+    //   done();
+    // }));
 
     // Watch component scripts
-    gulp.watch(paths.scripts.components, gulp.series(['scripts:components'], function(done) {
-      done();
-    }));
+    // gulp.watch(paths.scripts.components, gulp.series(['scripts:components'], function(done) {
+    //   done();
+    // }));
 
     done();
   }

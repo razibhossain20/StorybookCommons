@@ -1,5 +1,3 @@
-@media screen {
-  [data-site-id="glpg-111"] .headline-text .cmp-text {
-    overflow: hidden;
-  }
+[data-site-id="glpg-111"] .headline-text .cmp-text {
+  overflow: hidden;
 }
