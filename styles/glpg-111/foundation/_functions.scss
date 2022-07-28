@@ -20,7 +20,7 @@ $browsing-context: 16px;
   @if (unitless($context)) {
     $context: $context * 1px;
   }
-  @return $pixels / $browsing-context * 1rem;
+  @return calc($pixels / $browsing-context * 1rem);
 }
 
 
