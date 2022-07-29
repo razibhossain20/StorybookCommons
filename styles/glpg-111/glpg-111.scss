@@ -10,7 +10,7 @@ $site-id: "glpg-111";
 @import "bootstrap/__bootstrap-loader";
 
 // Pages
-@import "pages/__pages-loader";
+@import "foundation/_foundation-loader";
 
 
 [data-site-id="#{$site-id}"] {

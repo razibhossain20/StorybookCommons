@@ -1,19 +1,19 @@
 import React from 'react';
-import H2 from '../../components/atoms/h2/h2';
+import H6 from './h6';
 
 export default {
    title: 'Atoms/Headings',
-   component: H2,
+   component: H6,
    argTypes: {
     content: {
         control: {type: 'text'},
-        name: 'Heading2',
+        name: 'Heading6',
         defaultValue: 'Lorem Ipsum is simply dummy text of the printing and typesetting',
     },
    }
 };
 
-const Template = (args) => <H2 {...args}/>;
+const Template = (args) => <H6 {...args}/>;
 
-export const heading2 = Template.bind({});
+export const heading6 = Template.bind({});
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import HeadlineText from '../../components/molecules/headline-text/HeadlineText';
+import HeadlineText from './HeadlineText';
 
 
 const gapObject = {

@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const HeadlineText = (props) => (
   <div className={props.orientation || ''}>
     <div className="headline-text cmp">

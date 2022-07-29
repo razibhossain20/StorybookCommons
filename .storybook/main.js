@@ -3,9 +3,9 @@ const path = require('path');
 // Export a function. Accept the base config as the only param.
 module.exports = {
   stories: [
-    "../stories/**/*.stories.mdx",
-    "../stories/**/*.stories.@(js|jsx|ts|tsx)",
-    "../stories/**/*.stories.js"
+    "../components/**/*.stories.mdx",
+    "../components/**/*.stories.@(js|jsx|ts|tsx)",
+    "../components/**/*.stories.js"
   ],
 
   addons:[

@@ -3,11 +3,7 @@
     & > div:not(.mb-0):not(.m-0) {
         margin-bottom: $cmp-bottom-gap;
     }
-
     .cmp-text {
-        // Override AEM specific RTE classes ...
-        // @note Keep in mind: the text from bootstarp
-        // @see `ui.apps/resources/frontend/src/app/styles/bootstrap/_variables-bootstrap-override-glpg-117.scss`
         p {
             font-size: rem(16px);
             line-height: rem(32px);
@@ -38,6 +34,12 @@
 
         sub {
             top: 0.5em;
+        }
+        blockquote,
+        q {
+            font-size: rem(24px);
+            font-weight: 700;
+            line-height: rem(36px);
         }
 
         // Lists
@@ -74,35 +76,6 @@
                 }
             }
         }
-
-        blockquote,
-        q {
-            font-size: rem(24px);
-            font-weight: 700;
-            line-height: rem(36px);
-        }
-
-        // AEM BUTTON-LINK
-        & + .button-link {
-            margin-top: rem(20);
-        }
     }
 }
 
-
-// RTL list bulet update
-.orientation-right {
-    .headline-text .cmp-text ul {
-        padding-right: 0;
-
-        li {
-            padding-left: 0;
-            padding-right: rem(20px);
-
-            &::before {
-                left: initial;
-                right: 0;
-            }
-        }
-    }
-}

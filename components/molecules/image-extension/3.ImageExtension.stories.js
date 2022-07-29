@@ -1,5 +1,5 @@
 import React from 'react';
-import ImageExtension from '../../components/molecules/image-extension/ImageExtension';
+import ImageExtension from './ImageExtension';
 
 const image_size = {
    "width 25": 'w-25',

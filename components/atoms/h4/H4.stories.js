@@ -1,19 +1,19 @@
 import React from 'react';
-import A from '../../components/atoms/a/a';
+import H4 from './h4';
 
 export default {
-   title: 'Atoms/Link',
-   component: A,
+   title: 'Atoms/Headings',
+   component: H4,
    argTypes: {
     content: {
         control: {type: 'text'},
-        name: 'Heading1',
+        name: 'Heading4',
         defaultValue: 'Lorem Ipsum is simply dummy text of the printing and typesetting',
     },
    }
 };
 
-const Template = (args) => <A {...args}/>;
+const Template = (args) => <H4 {...args}/>;
 
-export const linkDefault = Template.bind({});
+export const heading4 = Template.bind({});
 

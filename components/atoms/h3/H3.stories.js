@@ -1,5 +1,5 @@
 import React from 'react';
-import H3 from '../../components/atoms/h3/h3';
+import H3 from './h3';
 
 export default {
    title: 'Atoms/Headings',

@@ -1,5 +1,5 @@
 import React from "react";
-import ButtonLink from "../../components/molecules/button-link/ButtonLink";
+import ButtonLink from "./ButtonLink";
 //import { select, text, boolean } from '@storybook/addon-knobs';
 
 // gorup of button
