@@ -17,6 +17,11 @@ export default {
         gap: {
             control: { type: "select", options: gapObject }
         },
+        textColor: {
+            control:{
+                type: 'color'
+            }
+        },
     }
 };
 // start
