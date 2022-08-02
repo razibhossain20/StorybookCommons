@@ -1,12 +1,5 @@
 import React from "react";
 import ButtonLink from "./ButtonLink";
-//import { select, text, boolean } from '@storybook/addon-knobs';
-
-// gorup of button
-const Default_Setup = "Default_Setup";
-const Modal_Setup = "Modal_Setup";
-
-// ------------- select dropdown for knobs -----------
 
 // Button Styles
 const button_styles_options = {

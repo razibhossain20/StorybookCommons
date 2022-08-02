@@ -2,9 +2,7 @@ import React from 'react';
 
 const ImageExtension = (props) => (
   <div className="image-extension section">
-
     <div className={`${props.image_position || ''} image-container`}>
-
       <a href={props.image_href} className={props.image_size}>
         {/* For Desktops && lAPTOP  */}
         <img className={`${props.bottom_gap} d-none d-lg-block img-fluid`}
@@ -23,7 +21,6 @@ const ImageExtension = (props) => (
           src={props.image_src}
           srcSet={`${props.image_src} 1300w, ${props.image_src} 975w, ${props.image_src} 730w`}
           alt="Mobile Img" />
-
       </a>
     </div>
   </div>
