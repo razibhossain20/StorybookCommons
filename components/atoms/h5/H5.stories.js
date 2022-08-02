@@ -1,5 +1,5 @@
 import React from 'react';
-import H5 from './h5';
+import H5 from './H5';
 
 export default {
    title: 'Atoms/Headings',

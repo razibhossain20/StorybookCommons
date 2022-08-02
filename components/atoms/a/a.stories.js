@@ -1,5 +1,5 @@
 import React from 'react';
-import A from './a';
+import A from './A';
 
 export default {
    title: 'Atoms/Link',

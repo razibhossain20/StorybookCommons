@@ -1,5 +1,5 @@
 import React from 'react';
-import H6 from './h6';
+import H6 from './H6';
 
 export default {
    title: 'Atoms/Headings',
