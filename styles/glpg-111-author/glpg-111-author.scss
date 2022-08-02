@@ -1,10 +1,5 @@
-//Glpg-111-AUTHOR styles 
-$site-id: "glpg-111";
-
 // Variables
-@import "variables/_variables-loader-author";
-
-
+@import "../glpg-111/foundation/variables";
 
 [data-site-id="#{$site-id}"] {
     // Components/Modules

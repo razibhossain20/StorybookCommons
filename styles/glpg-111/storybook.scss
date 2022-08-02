@@ -1,5 +1,5 @@
-//aem path
-@import "../glpg-111/foundation/aem-config";
+//storybook path
+@import "../glpg-111/foundation/storybook-config";
 
 // Foundation
 @import "foundation/__foundation-loader";
@@ -18,4 +18,3 @@
     // Components/Modules
     @import "components/__components-loader";
 }
-
