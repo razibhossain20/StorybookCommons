@@ -4,7 +4,7 @@ import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 import crfTheme from "./crfTheme";
 
 // // golbal scss
-import "../styles/glpg-111/storybook.scss";
+import "../styles/glpg-111/glpg-111.scss";
 
 // //viewport addons
 addParameters({

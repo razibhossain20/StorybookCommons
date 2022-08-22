@@ -21,9 +21,10 @@ const newer = require('gulp-newer');
 // =NPM PACKAGES FOR STYLES
 const autoprefixer  = require('autoprefixer'); // not `gulp-autoprefixer`
 const cssnano = require('gulp-cssnano');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const postcss = require('gulp-postcss');
 const assets = require('postcss-assets');
+const sassVariables = require('gulp-sass-variables');
 // =DEV BUILD
 // =ENVIRONMENT VARIABLE
 const devBuild = (process.env.NODE_ENV !== 'production');
@@ -255,6 +256,9 @@ gulp.task("styles:glpg_111", function(done) {
 
   gulp
     .src(paths.styles.glpg_111.entry)
+    .pipe(sassVariables({
+      $env: "production"
+    }))
     // .pipe(sourcemaps.init())
     .pipe(plumber({ errorHandler: onError }))
     .pipe(sass(sassOptions))

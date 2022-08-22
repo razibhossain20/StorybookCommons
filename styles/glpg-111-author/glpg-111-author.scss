@@ -2,6 +2,5 @@
 @import "../glpg-111/foundation/variables";
 
 [data-site-id="#{$site-id}"] {
-    // Components/Modules
     @import "components/_components-loader-author";
 }

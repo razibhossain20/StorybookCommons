@@ -1,18 +1,18 @@
-//aem path
-@import "../glpg-111/foundation/aem-config";
+$env: 'development' !default;
+$root-path: '/etc.clientlibs/glpg-werapriority/clientlibs/assets/resources/' !default;
+ 
+@if($env == 'development') {
+  $root-path: './';
+}
 
 // Foundation
 @import "foundation/__foundation-loader";
 
-// Third party
-@import "thirdparty/__thirdparty-loader";
-
 // Bootstrap 5
 @import "bootstrap/__bootstrap-loader";
 
-// Pages
-@import "foundation/_foundation-loader";
-
+// Third party
+@import "thirdparty/__thirdparty-loader";
 
 [data-site-id="#{$site-id}"] {
     // Components/Modules
